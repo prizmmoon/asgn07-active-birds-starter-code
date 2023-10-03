@@ -12,11 +12,10 @@ class Bird {
  
 
   protected const CONSERVATION_OPTIONS = [
-    1 => 'Beat up',
-    2 => 'Decent',
-    3 => 'Good',
-    4 => 'Great',
-    5 => 'Like New'
+    1 => 'Low concern',
+    2 => 'Moderate concern',
+    3 => 'Extreme concern',
+    4 => 'Extinct',
   ];
 
  

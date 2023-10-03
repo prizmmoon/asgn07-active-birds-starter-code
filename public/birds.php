@@ -4,7 +4,7 @@
   include(SHARED_PATH . '/public_header.php');
 ?>
 
-<h2>Sightings list</h2>
+<h2>Bird inventory</h2>
 <p>This is a short list -- start your birding!</p>
 
 
