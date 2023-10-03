@@ -2,7 +2,7 @@
 
 class ParseCSV {
 
-  public static $delimiter = ',';
+  public static $delimiter = '|';
 
   private $filename;
   private $header;
@@ -14,13 +14,6 @@ class ParseCSV {
       $this->file($filename);
     }
   }
-
-  /**
-  * @method mixed file() 
-  * @param mixed $filename
-   * @return boolean
-   * 
-   */
 
   public function file($filename) {
     if(!file_exists($filename)) {
