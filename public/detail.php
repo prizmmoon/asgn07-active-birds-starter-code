@@ -2,69 +2,69 @@
 
 <?php
 
-  // Get requested ID
+// Get requested ID
 
-  $id = $_GET['id'] ?? false;
+$id = $_GET['id'] ?? false;
 
-  if(!$id) {
-    redirect_to('bicycles.php');
-  }
+if (!$id) {
+  redirect_to('birds.php');
+}
 
-  // Find bicycle using ID
+// Find bicycle using ID
 
-  $bike = Bicycle::find_by_id($id);
+$bird = Bird::find_by_id($id);
 
 ?>
 
-<?php $page_title = 'Detail: ' . $bike->name(); ?>
+<?php $page_title = 'Detail: ' . $bird->name(); ?>
 <?php include(SHARED_PATH . '/public_header.php'); ?>
 
 <div id="main">
 
-  <a href="bicycles.php">Back to Inventory</a>
+  <a href="birds.php">Back to Inventory</a>
 
   <div id="page">
 
     <div class="detail">
       <dl>
         <dt>Brand</dt>
-        <dd><?php echo h($bike->brand); ?></dd>
+        <dd><?php echo h($bird->brand); ?></dd>
       </dl>
       <dl>
         <dt>Model</dt>
-        <dd><?php echo h($bike->model); ?></dd>
+        <dd><?php echo h($bird->model); ?></dd>
       </dl>
       <dl>
         <dt>Year</dt>
-        <dd><?php echo h($bike->year); ?></dd>
+        <dd><?php echo h($bird->year); ?></dd>
       </dl>
       <dl>
         <dt>Category</dt>
-        <dd><?php echo h($bike->category); ?></dd>
+        <dd><?php echo h($bird->category); ?></dd>
       </dl>
       <dl>
         <dt>Gender</dt>
-        <dd><?php echo h($bike->gender); ?></dd>
+        <dd><?php echo h($bird->gender); ?></dd>
       </dl>
       <dl>
         <dt>Color</dt>
-        <dd><?php echo h($bike->color); ?></dd>
+        <dd><?php echo h($bird->color); ?></dd>
       </dl>
       <dl>
         <dt>Weight</dt>
-        <dd><?php echo h($bike->weight_kg()) . ' / ' . h($bike->weight_lbs()); ?></dd>
+        <dd><?php echo h($bird->weight_kg()) . ' / ' . h($bird->weight_lbs()); ?></dd>
       </dl>
       <dl>
         <dt>Condition</dt>
-        <dd><?php echo h($bike->condition()); ?></dd>
+        <dd><?php echo h($bird->condition()); ?></dd>
       </dl>
       <dl>
         <dt>Price</dt>
-        <dd><?php echo h(money_format('$%i', $bike->price)); ?></dd>
+        <dd><?php echo h(money_format('$%i', $bird->price)); ?></dd>
       </dl>
       <dl>
         <dt>Description</dt>
-        <dd><?php echo h($bike->description); ?></dd>
+        <dd><?php echo h($bird->description); ?></dd>
       </dl>
     </div>
 
