@@ -16,7 +16,7 @@ $bird = Bird::find_by_id($id);
 
 ?>
 
-<?php $page_title = 'Detail: ' . $bird->name(); ?>
+<?php $page_title = 'Detail: ' . $bird->common_name; ?>
 <?php include(SHARED_PATH . '/public_header.php'); ?>
 
 <div id="main">
@@ -28,7 +28,7 @@ $bird = Bird::find_by_id($id);
     <div class="detail">
       <dl>
         <dt>Common name</dt>
-        <dd><?php echo h($bird->name); ?></dd>
+        <dd><?php echo h($bird->common_name); ?></dd>
       </dl>
       <dl>
         <dt>Habitat</dt>
