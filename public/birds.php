@@ -40,5 +40,13 @@ include(SHARED_PATH . '/public_header.php');
 
 </table>
 
+<?php
+
+$sql = "SELECT * FROM birds";
+$result = Bird::$database->query($sql);
+$row = $result->fetch_assoc();
+$result->free();
+
+?>
 
 <?php include(SHARED_PATH . '/public_footer.php'); ?>
