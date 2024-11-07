@@ -42,8 +42,7 @@ include(SHARED_PATH . '/public_header.php');
 
 <?php
 
-$sql = "SELECT * FROM birds";
-$result = Bird::$database->query($sql);
+$result = Birds::find_all();
 $row = $result->fetch_assoc();
 $result->free();
 
