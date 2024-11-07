@@ -21,12 +21,11 @@ include(SHARED_PATH . '/public_header.php');
 
   <?php
 
-  $parser = new ParseCSV(PRIVATE_PATH . '/wnc-birds.csv');
-  $bird_array = $parser->parse();
+  $birds = Bird::find_all();
 
-  foreach ($bird_array as $args) {
-    $bird = new Bird($args);
   ?>
+
+  <?php foreach ($birds as $bird) { ?>
     <tr>
       <td><?php echo h($bird->common_name); ?></td>
       <td><?php echo h($bird->habitat); ?></td>
@@ -39,13 +38,5 @@ include(SHARED_PATH . '/public_header.php');
   <?php } ?>
 
 </table>
-
-<?php
-
-$result = Birds::find_all();
-$row = $result->fetch_assoc();
-$result->free();
-
-?>
 
 <?php include(SHARED_PATH . '/public_footer.php'); ?>
