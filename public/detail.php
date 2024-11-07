@@ -27,44 +27,24 @@ $bird = Bird::find_by_id($id);
 
     <div class="detail">
       <dl>
-        <dt>Brand</dt>
-        <dd><?php echo h($bird->brand); ?></dd>
+        <dt>Common name</dt>
+        <dd><?php echo h($bird->name); ?></dd>
       </dl>
       <dl>
-        <dt>Model</dt>
-        <dd><?php echo h($bird->model); ?></dd>
+        <dt>Habitat</dt>
+        <dd><?php echo h($bird->habitat); ?></dd>
       </dl>
       <dl>
-        <dt>Year</dt>
-        <dd><?php echo h($bird->year); ?></dd>
+        <dt>Food</dt>
+        <dd><?php echo h($bird->food); ?></dd>
       </dl>
       <dl>
-        <dt>Category</dt>
-        <dd><?php echo h($bird->category); ?></dd>
+        <dt>Conservation level</dt>
+        <dd><?php echo h($bird->conservation_id); ?></dd>
       </dl>
       <dl>
-        <dt>Gender</dt>
-        <dd><?php echo h($bird->gender); ?></dd>
-      </dl>
-      <dl>
-        <dt>Color</dt>
-        <dd><?php echo h($bird->color); ?></dd>
-      </dl>
-      <dl>
-        <dt>Weight</dt>
-        <dd><?php echo h($bird->weight_kg()) . ' / ' . h($bird->weight_lbs()); ?></dd>
-      </dl>
-      <dl>
-        <dt>Condition</dt>
-        <dd><?php echo h($bird->condition()); ?></dd>
-      </dl>
-      <dl>
-        <dt>Price</dt>
-        <dd><?php echo h(money_format('$%i', $bird->price)); ?></dd>
-      </dl>
-      <dl>
-        <dt>Description</dt>
-        <dd><?php echo h($bird->description); ?></dd>
+        <dt>Backyard tips</dt>
+        <dd><?php echo h($bird->backyard_tips); ?></dd>
       </dl>
     </div>
 
